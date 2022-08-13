@@ -6,12 +6,12 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>从有解的模型开始 - Hexo</title>
+  <title>图神经网络 - Hexo</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
   
-  <meta name="description" content="在对能量流&#x2F;物质流等各种流耦合的初期建模和测...">
+  <meta name="description" content="随着机器学习、深度学习的发展，语音、图像、自然语言处理...">
   <meta name="author" content="ayiyahei">
   <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
   <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -150,7 +150,7 @@
       
       
     </div>
-    <div class="center">从有解的模型开始</div>
+    <div class="center">图神经网络</div>
     <div class="right">
       <i class="iconfont iconmenu j-navbar-menu"></i>
     </div>
@@ -188,25 +188,25 @@
       <div class="col-xl-6"><article class="article">
   <div class="wrap">
     <section class="head">
-  <img   class="lazyload" data-original="/images/ky0814.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <img   class="lazyload" data-original="/images/ky0814_2.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
-    <h1 class="head-title">从有解的模型开始</h1>
+    <h1 class="head-title">图神经网络</h1>
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>August 14, 2022</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>429</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1324</span>
     </div>
   </div>
 </section>
     <section class="main">
       <section class="content">
         
-        <p>在对能量流&#x2F;物质流等各种流耦合的初期建模和测试阶段，很容易面临无解的情况，这种情况在现实中是存在的（总不能任何事情都能靠调度解决吧），但是测试时一个存在的解又是很重要的参考。</p>
-<p>为了解决上述问题，有两种改变可以考虑，全连接图或者考虑边界外的出口：</p>
-<ol>
-<li>全连接图式：想这个起因是一个师兄让考虑一下的一个证明，讲的是物流行业内全连接节点配置（至少是任何两个节点之间都有路径可以流通的配置）对于负载的柔性是最大的，那么一个好的基础模型是否应当是全连接图式的呢？等有空了可以做一下。但是无论是否效果够好，我们都可以用一个基础的全连接图式模型跑代码，再一条条加节点&#x2F;边的各类约束，也许从而会获得一些信息？</li>
-<li>模型几乎不会1v1复刻真是系统的，总得定些边界，例如电热耦合的生产，弃电和弃热在现实生活中会以风冷或者直接排出等方式解决掉，但是往往不在我之前的模型中考虑。但是这种强耦合又会导致模型的不可解但实际的可解，在建模的测试阶段应当充分考虑这些因素。</li>
-</ol>
+        <p>随着机器学习、深度学习的发展，语音、图像、自然语言处理逐渐取得了很大的突破，然而语音、图像、文本都是很简单的序列或者网格数据，是很结构化的数据，深度学习很善于处理该种类型的数据。然而现实世界中并不是所有的事物都可以表示成一个序列或者一个网格，例如社交网络、知识图谱、复杂的文件系统等，也就是说很多事物都是非结构化的。因此，对图神经网络的研究也日渐增加。可以把图神经网络分为了五类：图卷积网络、图注意力网络、图自编码机、图生成网络和图时空网络。同时，图分析任务可以大致抽象为以下四类：节点分类、链接预测、聚类以及可视化。</p>
+<h2 id="图嵌入"><a href="#图嵌入" class="headerlink" title="图嵌入"></a>图嵌入</h2><p>图嵌入指的是将图转换到保存图信息的低维空间，将图表示为或多组低维向量。图嵌入的输出是表示整个图或者部分图的低维向量。然后将输出的低维向量应用到其他机器学习方法中。 自从word2vec这个神奇的算法出世以后，导致了一波嵌入（Embedding）热，基于句子、文档表达的word2vec、doc2vec算法，基于物品序列的item2vec算法，基于图模型的图嵌入技术，无论是在引荐、广告还是反欺诈范畴，各互联网公司基于本身业务与嵌入结合的论文相继问世。由于图（Graph）表示一种“二维”的关系，而序列（Sequence）表示一种“一维”的关系。因此，要将图转换为Graph Embedding，一般需要先通过一些算法把图变为序列；然后通过一些模型或算法把这些序列转换为Embedding。当前比较知名的图嵌入方法有DeepWalk、Line和Node2vec，这些都是基于顶点对相似度的图表示学习，仅仅保留了一部分的图的特性，其效果类似于按概率的聚类。</p>
+<h2 id="图卷积网络"><a href="#图卷积网络" class="headerlink" title="图卷积网络"></a>图卷积网络</h2><p>由传统的卷积神经网络引申出的图卷积网络，图卷积方法可分为两种，基于频谱的方法和基于空间的方法。基于频谱的方法，从图信号处理的角度，引入滤波器来定义图卷积，因此基于频谱的图卷积可理解为从图信号中去除噪声。基于空间的图卷积方法，通过汇集邻居节点的信息来构建图卷积。当图卷积在节点级运作时，可以将图池化模块和图卷积进行交错叠加，从而将图粗化为高级的子图。</p>
+<p>在基于空间的图卷积网络中，与传统卷积神经网络相同的是，二者均通过聚合临近的点&#x2F;临近的节点来得到新的层&#x2F;节点表示，即抽象出的表示，以支持下一步的分类、预测等任务。其中，基于递归的空间图卷及网络主要用于不断进行节点间信息交互以更新节点，直至各节点稳定，基于组合的空间图卷及网络主要用于层层分析临域信息以获得总览的效果。而图卷积的关键就在于如何汇集节点自身的特征和临接节点的特征（神经网络学习目标）。</p>
+<h2 id="GraphSAGE"><a href="#GraphSAGE" class="headerlink" title="GraphSAGE"></a>GraphSAGE</h2><p>图卷积网络存在的一大问题在于其训练时需要整张图的结构信息，包括训练集和测试集，但是这是对于下一步的分类、预测任务是不利的，因此，我们需要一种方法，合理的把训练集和测试集区分出来，同时适应了网络结构信息不全时的预测问题。这方面的典型应用是GraphSAGE，它的训练主要分为两个步骤：采样和聚合，即首先对节点k的邻居进行采样，接着聚合邻居的信息以更新自身的表示。</p>
+<p>对于有监督学习，以预测和真实的交叉熵作为损失函数；对于无监督学习，假设相邻节点的表示尽可能相同来设计损失函数。</p>
 
       </section>
       <section class="extra">
@@ -214,7 +214,7 @@
           <ul class="copyright">
   
     <li><strong>本文作者：</strong>ayiyahei</li>
-    <li><strong>本文链接：</strong><a href="http://ayiyahei.github.io/2022/08/14/ky0814/index.html" title="http:&#x2F;&#x2F;ayiyahei.github.io&#x2F;2022&#x2F;08&#x2F;14&#x2F;ky0814&#x2F;index.html">http:&#x2F;&#x2F;ayiyahei.github.io&#x2F;2022&#x2F;08&#x2F;14&#x2F;ky0814&#x2F;index.html</a></li>
+    <li><strong>本文链接：</strong><a href="http://ayiyahei.github.io/2022/08/14/ky0814%E2%80%94%E2%80%942/index.html" title="http:&#x2F;&#x2F;ayiyahei.github.io&#x2F;2022&#x2F;08&#x2F;14&#x2F;ky0814%E2%80%94%E2%80%942&#x2F;index.html">http:&#x2F;&#x2F;ayiyahei.github.io&#x2F;2022&#x2F;08&#x2F;14&#x2F;ky0814%E2%80%94%E2%80%942&#x2F;index.html</a></li>
     <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
   
 </ul>
@@ -225,8 +225,8 @@
 
         
   <nav class="nav">
-    <a href="/2022/08/14/ky0814%E2%80%94%E2%80%942/"><i class="iconfont iconleft"></i>图神经网络</a>
-    <a href="/2022/08/13/sx220813/">榆林反思0813<i class="iconfont iconright"></i></a>
+    <a></a>
+    <a href="/2022/08/14/ky0814/">从有解的模型开始<i class="iconfont iconright"></i></a>
   </nav>
 
       </section>
@@ -272,7 +272,7 @@
           
   <aside class="toc-wrap">
     <h3 class="toc-title">文章目录：</h3>
-    
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E5%B5%8C%E5%85%A5"><span class="toc-text">图嵌入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E5%8D%B7%E7%A7%AF%E7%BD%91%E7%BB%9C"><span class="toc-text">图卷积网络</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GraphSAGE"><span class="toc-text">GraphSAGE</span></a></li></ol>
   </aside>
 
         
