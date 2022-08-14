@@ -81,4 +81,19 @@
         <tag>“科研”</tag>
       </tags>
   </entry>
+  <entry>
+    <title>超图基础</title>
+    <url>/2022/08/14/ky0814%E2%80%94%E2%80%943/</url>
+    <content><![CDATA[<p>与普通图不同的是，超图中的边可以连接多个节点，其优势在于可以描述两个节点的图不便于表示的属性及群组关系。</p>
+<h2 id="超图描述"><a href="#超图描述" class="headerlink" title="超图描述"></a>超图描述</h2><p>常见的图关联矩阵的行列均为节点；超图的关联矩阵的行为节点，列为超边。同时，超图还可以通过直接拼接超边关联矩阵来融合多模态数据。</p>
+<p><img  src="/./images/ky0814-3/image-20220814155201001.png"  ><span class="image-caption">image-20220814155201001</span></p>
+<h2 id="HGNN框架"><a href="#HGNN框架" class="headerlink" title="HGNN框架"></a>HGNN框架</h2><p>HGNN框架如下图所示，多模态数据集分为训练数据和测试数据，每个数据包含几个具有特征的节点。然后利用多模态数据集的复杂相关性构造多个超边结构群。将超图的邻域矩阵H和节点特征输入到HGNN中，得到节点输出标签。</p>
+<p><img  src="/./images/ky0814-3/image-20220814161234534.png"  ><span class="image-caption">image-20220814161234534</span></p>
+<h2 id="网络实现"><a href="#网络实现" class="headerlink" title="网络实现"></a>网络实现</h2><p>HGNN的实现分为以下步骤：构建超图，生成超边特征，更新节点特征。其学习过程包括：输入第L层特征，构建第L层超图结构，超图卷积（包括点卷积和超边卷积），输出L+1层特征。</p>
+<p><img  src="/./images/ky0814-3/image-20220814162939272.png"  ><span class="image-caption">image-20220814162939272</span></p>
+]]></content>
+      <tags>
+        <tag>图神经网络</tag>
+      </tags>
+  </entry>
 </search>

@@ -6,12 +6,12 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>图神经网络 - Hexo</title>
+  <title>超图基础 - Hexo</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
   
-  <meta name="description" content="随着机器学习、深度学习的发展，语音、图像、自然语言处理...">
+  <meta name="description" content="与普通图不同的是，超图中的边可以连接多个节点，其优势在...">
   <meta name="author" content="ayiyahei">
   <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
   <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -150,7 +150,7 @@
       
       
     </div>
-    <div class="center">图神经网络</div>
+    <div class="center">超图基础</div>
     <div class="right">
       <i class="iconfont iconmenu j-navbar-menu"></i>
     </div>
@@ -188,25 +188,26 @@
       <div class="col-xl-6"><article class="article">
   <div class="wrap">
     <section class="head">
-  <img   class="lazyload" data-original="/images/ky0814_2.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <img   class="lazyload" data-original="/images/ky0814_3.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
-    <h1 class="head-title">图神经网络</h1>
+    <h1 class="head-title">超图基础</h1>
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>August 14, 2022</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1324</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>394</span>
     </div>
   </div>
 </section>
     <section class="main">
       <section class="content">
         
-        <p>随着机器学习、深度学习的发展，语音、图像、自然语言处理逐渐取得了很大的突破，然而语音、图像、文本都是很简单的序列或者网格数据，是很结构化的数据，深度学习很善于处理该种类型的数据。然而现实世界中并不是所有的事物都可以表示成一个序列或者一个网格，例如社交网络、知识图谱、复杂的文件系统等，也就是说很多事物都是非结构化的。因此，对图神经网络的研究也日渐增加。可以把图神经网络分为了五类：图卷积网络、图注意力网络、图自编码机、图生成网络和图时空网络。同时，图分析任务可以大致抽象为以下四类：节点分类、链接预测、聚类以及可视化。</p>
-<h2 id="图嵌入"><a href="#图嵌入" class="headerlink" title="图嵌入"></a>图嵌入</h2><p>图嵌入指的是将图转换到保存图信息的低维空间，将图表示为或多组低维向量。图嵌入的输出是表示整个图或者部分图的低维向量。然后将输出的低维向量应用到其他机器学习方法中。 自从word2vec这个神奇的算法出世以后，导致了一波嵌入（Embedding）热，基于句子、文档表达的word2vec、doc2vec算法，基于物品序列的item2vec算法，基于图模型的图嵌入技术，无论是在引荐、广告还是反欺诈范畴，各互联网公司基于本身业务与嵌入结合的论文相继问世。由于图（Graph）表示一种“二维”的关系，而序列（Sequence）表示一种“一维”的关系。因此，要将图转换为Graph Embedding，一般需要先通过一些算法把图变为序列；然后通过一些模型或算法把这些序列转换为Embedding。当前比较知名的图嵌入方法有DeepWalk、Line和Node2vec，这些都是基于顶点对相似度的图表示学习，仅仅保留了一部分的图的特性，其效果类似于按概率的聚类。</p>
-<h2 id="图卷积网络"><a href="#图卷积网络" class="headerlink" title="图卷积网络"></a>图卷积网络</h2><p>由传统的卷积神经网络引申出的图卷积网络，图卷积方法可分为两种，基于频谱的方法和基于空间的方法。基于频谱的方法，从图信号处理的角度，引入滤波器来定义图卷积，因此基于频谱的图卷积可理解为从图信号中去除噪声。基于空间的图卷积方法，通过汇集邻居节点的信息来构建图卷积。当图卷积在节点级运作时，可以将图池化模块和图卷积进行交错叠加，从而将图粗化为高级的子图。</p>
-<p>在基于空间的图卷积网络中，与传统卷积神经网络相同的是，二者均通过聚合临近的点&#x2F;临近的节点来得到新的层&#x2F;节点表示，即抽象出的表示，以支持下一步的分类、预测等任务。其中，基于递归的空间图卷及网络主要用于不断进行节点间信息交互以更新节点，直至各节点稳定，基于组合的空间图卷及网络主要用于层层分析临域信息以获得总览的效果。而图卷积的关键就在于如何汇集节点自身的特征和临接节点的特征（神经网络学习目标）。</p>
-<h2 id="GraphSAGE"><a href="#GraphSAGE" class="headerlink" title="GraphSAGE"></a>GraphSAGE</h2><p>图卷积网络存在的一大问题在于其训练时需要整张图的结构信息，包括训练集和测试集，但是这是对于下一步的分类、预测任务是不利的，因此，我们需要一种方法，合理的把训练集和测试集区分出来，同时适应了网络结构信息不全时的预测问题。这方面的典型应用是GraphSAGE，它的训练主要分为两个步骤：采样和聚合，即首先对节点k的邻居进行采样，接着聚合邻居的信息以更新自身的表示。</p>
-<p>对于有监督学习，以预测和真实的交叉熵作为损失函数；对于无监督学习，假设相邻节点的表示尽可能相同来设计损失函数。</p>
+        <p>与普通图不同的是，超图中的边可以连接多个节点，其优势在于可以描述两个节点的图不便于表示的属性及群组关系。</p>
+<h2 id="超图描述"><a href="#超图描述" class="headerlink" title="超图描述"></a>超图描述</h2><p>常见的图关联矩阵的行列均为节点；超图的关联矩阵的行为节点，列为超边。同时，超图还可以通过直接拼接超边关联矩阵来融合多模态数据。</p>
+<p><img    class="lazyload" data-original="/./images/ky0814-3/image-20220814155201001.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image-20220814155201001</span></p>
+<h2 id="HGNN框架"><a href="#HGNN框架" class="headerlink" title="HGNN框架"></a>HGNN框架</h2><p>HGNN框架如下图所示，多模态数据集分为训练数据和测试数据，每个数据包含几个具有特征的节点。然后利用多模态数据集的复杂相关性构造多个超边结构群。将超图的邻域矩阵H和节点特征输入到HGNN中，得到节点输出标签。</p>
+<p><img    class="lazyload" data-original="/./images/ky0814-3/image-20220814161234534.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image-20220814161234534</span></p>
+<h2 id="网络实现"><a href="#网络实现" class="headerlink" title="网络实现"></a>网络实现</h2><p>HGNN的实现分为以下步骤：构建超图，生成超边特征，更新节点特征。其学习过程包括：输入第L层特征，构建第L层超图结构，超图卷积（包括点卷积和超边卷积），输出L+1层特征。</p>
+<p><img    class="lazyload" data-original="/./images/ky0814-3/image-20220814162939272.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image-20220814162939272</span></p>
 
       </section>
       <section class="extra">
@@ -214,19 +215,19 @@
           <ul class="copyright">
   
     <li><strong>本文作者：</strong>ayiyahei</li>
-    <li><strong>本文链接：</strong><a href="http://ayiyahei.github.io/2022/08/14/ky0814%E2%80%94%E2%80%942/index.html" title="http:&#x2F;&#x2F;ayiyahei.github.io&#x2F;2022&#x2F;08&#x2F;14&#x2F;ky0814%E2%80%94%E2%80%942&#x2F;index.html">http:&#x2F;&#x2F;ayiyahei.github.io&#x2F;2022&#x2F;08&#x2F;14&#x2F;ky0814%E2%80%94%E2%80%942&#x2F;index.html</a></li>
+    <li><strong>本文链接：</strong><a href="http://ayiyahei.github.io/2022/08/14/ky0814%E2%80%94%E2%80%943/index.html" title="http:&#x2F;&#x2F;ayiyahei.github.io&#x2F;2022&#x2F;08&#x2F;14&#x2F;ky0814%E2%80%94%E2%80%943&#x2F;index.html">http:&#x2F;&#x2F;ayiyahei.github.io&#x2F;2022&#x2F;08&#x2F;14&#x2F;ky0814%E2%80%94%E2%80%943&#x2F;index.html</a></li>
     <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
   
 </ul>
         
         
         
-  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E2%80%9C%E7%A7%91%E7%A0%94%E2%80%9D/" rel="tag">“科研”</a></li></ul> 
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BE%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" rel="tag">图神经网络</a></li></ul> 
 
         
   <nav class="nav">
-    <a href="/2022/08/14/ky0814%E2%80%94%E2%80%943/"><i class="iconfont iconleft"></i>超图基础</a>
-    <a href="/2022/08/14/ky0814/">从有解的模型开始<i class="iconfont iconright"></i></a>
+    <a></a>
+    <a href="/2022/08/14/ky0814%E2%80%94%E2%80%942/">图神经网络<i class="iconfont iconright"></i></a>
   </nav>
 
       </section>
@@ -272,7 +273,7 @@
           
   <aside class="toc-wrap">
     <h3 class="toc-title">文章目录：</h3>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E5%B5%8C%E5%85%A5"><span class="toc-text">图嵌入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E5%8D%B7%E7%A7%AF%E7%BD%91%E7%BB%9C"><span class="toc-text">图卷积网络</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GraphSAGE"><span class="toc-text">GraphSAGE</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B6%85%E5%9B%BE%E6%8F%8F%E8%BF%B0"><span class="toc-text">超图描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HGNN%E6%A1%86%E6%9E%B6"><span class="toc-text">HGNN框架</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%AE%9E%E7%8E%B0"><span class="toc-text">网络实现</span></a></li></ol>
   </aside>
 
         
