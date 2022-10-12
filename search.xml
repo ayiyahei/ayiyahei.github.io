@@ -101,9 +101,9 @@
     <url>/2022/10/12/ky20221012/</url>
     <content><![CDATA[<p>起因是跑代码时出现了status&#x3D;12&#x2F;13的情况</p>
 <p>status:</p>
-<p><img  src="/./images/ky1012%5Cstatus%E4%B8%AD%E6%96%87.png"  ><span class="image-caption">status中文</span></p>
+<p><img  src="/./images/ky1012/status%E4%B8%AD%E6%96%87.png"  ><span class="image-caption">status中文</span></p>
 <p>错误原因：</p>
-<p>![numerical issues](.&#x2F;images&#x2F;ky1012\numerical issues.png)</p>
+<p>![numerical issues](.&#x2F;images&#x2F;ky1012&#x2F;numerical issues.png)</p>
 <ol>
 <li><p>建立模型时系数的舍入（四舍五入导致原有模型中自洽的约束冲突，一般很容易找）</p>
 </li>
