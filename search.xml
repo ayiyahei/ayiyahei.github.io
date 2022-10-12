@@ -103,7 +103,7 @@
 <p>status:</p>
 <p><img  src="/./images/ky1012/status.png"  ><span class="image-caption">status中文</span></p>
 <p>错误原因：</p>
-<p>![numerical issues](.&#x2F;images&#x2F;ky1012&#x2F;numerical issues.png)</p>
+<p><img  src="/./images/ky1012/numerical.png"  ><span class="image-caption">numerical issues</span></p>
 <ol>
 <li><p>建立模型时系数的舍入（四舍五入导致原有模型中自洽的约束冲突，一般很容易找）</p>
 </li>
