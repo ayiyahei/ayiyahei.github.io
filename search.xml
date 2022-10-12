@@ -96,4 +96,30 @@
         <tag>图神经网络</tag>
       </tags>
   </entry>
+  <entry>
+    <title>gurobi数值问题</title>
+    <url>/2022/10/12/ky20221012/</url>
+    <content><![CDATA[<p>起因是跑代码时出现了status&#x3D;12&#x2F;13的情况</p>
+<p>status:</p>
+<p><img  src="/./images/ky1012%5Cstatus%E4%B8%AD%E6%96%87.png"  ><span class="image-caption">status中文</span></p>
+<p>错误原因：</p>
+<p>![numerical issues](.&#x2F;images&#x2F;ky1012\numerical issues.png)</p>
+<ol>
+<li><p>建立模型时系数的舍入（四舍五入导致原有模型中自洽的约束冲突，一般很容易找）</p>
+</li>
+<li><p>浮点数运算限制</p>
+</li>
+<li><p>要求精度过高</p>
+</li>
+<li><p>其他数学原因</p>
+<p>我的问题在于数值差过大，在gurobi中，x&lt;&#x3D;0和x&gt;&#x3D;10^（-10）是可以同时存在的，这种机制主要是为了避免计算时省略的n位小数带来的《最优解不被承认是最优解，因为它甚至不可行》。</p>
+<p>但是这个机制会使得参数&#x2F;变量的最大值和最小值相差过大时导致数值错误（gurobi会试图找到解，这时status是13，有解，或者sataus是12，无解），大M法用的话有时候也会出现这样的问题。</p>
+<p>改的办法的话：缩放数值太大或者太小的行，可以迭代。尽量用先验知识缩范围。</p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>优化</tag>
+      </tags>
+  </entry>
 </search>
