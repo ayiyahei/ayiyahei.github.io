@@ -101,7 +101,7 @@
     <url>/2022/10/12/ky20221012/</url>
     <content><![CDATA[<p>起因是跑代码时出现了status&#x3D;12&#x2F;13的情况</p>
 <p>status:</p>
-<p><img  src="/./images/ky1012/status%E4%B8%AD%E6%96%87.png"  ><span class="image-caption">status中文</span></p>
+<p><img  src="/./images/ky1012/status.png"  ><span class="image-caption">status中文</span></p>
 <p>错误原因：</p>
 <p>![numerical issues](.&#x2F;images&#x2F;ky1012&#x2F;numerical issues.png)</p>
 <ol>
