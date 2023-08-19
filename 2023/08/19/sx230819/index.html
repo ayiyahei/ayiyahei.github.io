@@ -6,12 +6,12 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>电力系统恢复力综述笔记 - Hexo</title>
+  <title>我又该向往着哪里 - Hexo</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
   
-  <meta name="description" content="“A review on resilience stu...">
+  <meta name="description" content="好久好久好久没写博客了，没有写博客的日子也在努力学习努...">
   <meta name="author" content="ayiyahei">
   <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
   <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -150,7 +150,7 @@
       
       
     </div>
-    <div class="center">电力系统恢复力综述笔记</div>
+    <div class="center">我又该向往着哪里</div>
     <div class="right">
       <i class="iconfont iconmenu j-navbar-menu"></i>
     </div>
@@ -188,61 +188,28 @@
       <div class="col-xl-6"><article class="article">
   <div class="wrap">
     <section class="head">
-  <img   class="lazyload" data-original="/images/ky20230307.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <img   class="lazyload" data-original="/images/sx20230819.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
-    <h1 class="head-title">电力系统恢复力综述笔记</h1>
+    <h1 class="head-title">我又该向往着哪里</h1>
     <div class="head-info">
-      <span class="post-info-item"><i class="iconfont iconcalendar"></i>March 07, 2023</span>
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>August 19, 2023</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1639</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1101</span>
     </div>
   </div>
 </section>
     <section class="main">
       <section class="content">
         
-        <p>“A review on resilience studies in active distribution systems” (Mishra 等, 2021, p. 1)</p>
-<ol>
-<li><p>背景：</p>
-<p>自然灾害&#x2F;人为攻击影响电力基础设施正常运行，从而带来经济损失，现代电网对于可持续、安全、鲁棒的要求越来越高</p>
-</li>
-<li><p>定义：</p>
-<p>抗击自然灾害+立即恢复的能力，可由鲁棒性和快速性评价</p>
-<p>可靠性：高发生概率，低破坏性</p>
-<p>恢复力：低发生概率，高破坏性</p>
-<p>active distribution system (ADS）主动配电网络，将分布式能源作为一部分来管理以提高配电系统的可靠性</p>
-</li>
-<li><p>在规划方向的工作</p>
-<p>在事故发生前，根据天气等情景实施一些规划行动，以减少后果。相关研究包括设施强化、资源分配、资源调度、重新配置、修复、维修工排班等</p>
-<p>a. distribution system hardening</p>
-<p>  目的：强化硬件(重复的配电线路、设备等)&gt;经济高效的硬件强化策略</p>
-<p>  典型方法：defender–attacker–defender (DAD)模型，min-max-min，设施强化投资+被攻击后的损失最小-在最坏的事件发生时-在通过运行调度来尽可能降低损失，一二层沟通拓扑结构和最坏场景，二三层沟通拓扑场景和损失（好像是这样呜呜）</p>
-<p>b. resilience based coordination of MGs</p>
-<p>  目的：改进控制单元、故障检测、能量调度、功率储备、互联MG(多微网)&gt;单个微电网的最优鲁棒配置</p>
-<p>  典型方法：adaptive robust optimization (ARO) ，min-max-min，规划投资+最坏情况下（光伏等不确定性）的损失最小-不确定性的最差情况发生时-通过运行调度尽可能降低损失，一二层沟通设备大小和最坏场景，二三层沟通设备场景和损失</p>
-<p>c. vulnerability measures</p>
-<p>  目的：识别脆弱结点和易受攻击的组件；可靠性指标分析&gt;分析天气相关脆弱性（暴雪、强风、高温、高负载）、时间相关脆弱性（工作日、时间点）</p>
-<p>  典型方法：好像是应对黑客攻击和漏洞（电力系统漏洞）的，主要是基于一些配电公司收取的统计数据的分析，有一些风险指标，包括年客户服务中断次数，对天气有补偿级别等</p>
-<p>d. resource allocation</p>
-<p>  目的：灾难事件期间的资源分配问题&gt;电力系统恢复规划决策</p>
-<p>  典型方法： two-stage stochastic linear program with recourse，第一阶段是优化灾难发生前预调度的资源成本，第二阶段是灾难恢复计划范围内的负载中断成本和总发电成本，而在灾难发生前的预调度是基于预测的，是否灾害发生有概率；有序优化；</p>
-<p>e. restoration planning</p>
-<p>  目的：灾难发生后的快速响应和恢复&gt;关键设施的配置调度（如可移动储能）</p>
-<p>  典型方法：建模求解（拓扑+可移动储能的平衡+分布式发电的约束）</p>
-<p>f. repair crew planning</p>
-<p>  目的：维修人员&#x2F;设备的最优调度</p>
-<p>  典型方法：建模求解</p>
-</li>
-<li><p>在运行方面的工作</p>
-<p>在事故发生期间，运行应尽量以较小的脆弱性和最低的恢复时间运行。相关研究包括优化运行、协调运行、恢复、脆弱性措施、操作估值和软件定义行动等</p>
-<p>a. optimal operation</p>
-<p>  目的：以预期负载损失最低为目标</p>
-<p>  典型方法：主动控制（不同天气的组件故障率模型+马尔科夫递归的系统状态转移）、随机规划、分层控制（在并网孤岛下的几种控制模式，用来平稳电压运行的）、图论、鲁棒优化、将风险评估作为目标函数的一部分（VaR，condition value of risk(CVaR)，没看懂ww）</p>
-<p>b. coordinated operation</p>
-<p>  目的：尽量满足紧急必要负荷</p>
-<p>  典型方法：灾难后重新划分拓扑网络</p>
-</li>
-</ol>
+        <p>好久好久好久没写博客了，没有写博客的日子也在努力学习努力工作哦！</p>
+<p><img    class="lazyload" data-original="/./images/sx20230819/1.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image-20220814155201001</span></p>
+<p>开玩笑咯，只是很久没有过反思和输出了，特此记录这一年的重要节点和想法。</p>
+<h3 id="寻找和珍藏真正想要的东西"><a href="#寻找和珍藏真正想要的东西" class="headerlink" title="寻找和珍藏真正想要的东西"></a>寻找和珍藏真正想要的东西</h3><p>起源是必须要做出一个人生重要选择，在决策前咨询了很多意见，包括网上收集信息、问玄、询问经历过的人等，给出了不一的答案，也深刻明白了各个选择的优劣，但是直到做决策之前的那一天，才深刻感受到了《我想要》确实是会令人灵魂和肉体战栗的东西，然后开始在后来的每一次决策前都要问心：我渴望什么，真正想要什么，愿意为其付出多少。</p>
+<h3 id="保护好身体和灵魂"><a href="#保护好身体和灵魂" class="headerlink" title="保护好身体和灵魂"></a>保护好身体和灵魂</h3><p>不知道为什么，随着慢慢长大，听到了越来越多身边人生病的消息，包括一些同龄人。头一次感受到生命的脆弱，以及身体不适对精神健康带来的巨大影响。怎么说呢，更愿意珍惜那些之前认为常态化的健康和人了，有提升为健康、家人、朋友付出时间和精力的意愿，珍惜当前所有。</p>
+<h3 id="一次见世面"><a href="#一次见世面" class="headerlink" title="一次见世面"></a>一次见世面</h3><p>因为一些特殊的原因，坐了一次耗时整个晚上的硬座火车，正巧那辆火车有特别多的人，很挤，到后半夜空气里充斥着暗沉和昏睡的气息，杂乱中又莫名的安详。邻座看起来是是一个外地做工赶回家的叔，会和蔼地问我要不换到靠窗他那里好睡觉，行事间有些谨慎和忐忑，对面坐左边是一个50多岁的阿姨，说是腿不好所以前半程半躺着，对面右边是中途上来的一对儿情侣，一直不睡并且外放看视频，但对周围的人也还算礼貌，会很小心地怕碰到他人睡觉。绿皮火车上没有给每排座位都配电源，要充电得到车厢连接处去，中途叔向阿姨分享了一段时间的充电宝。仔细的把这些写了下来了但其实我也不知道为什么，这个情景总是在我眼前浮现又浮现，永远忘不了，可能总是在提醒我，无论走了多远去了哪里，都不要忘记来自哪里，都不要忘记这些人把。这些社会中社会中最广泛的人，脱离我幼稚单一价值观真实存在的人，可能有着小市民的市侩、可能不讲究，但是永远比我认知中更吃苦耐劳、更多善良、更多热情、更多勇敢的人，可能就是我们父辈、祖辈的人。警醒自己永远不要忘记他们，不要忽略他们，向他们学习，为他们骄傲，然后让自己配成为他们，再让他们变成我们。</p>
+<h3 id="我该向往着哪里"><a href="#我该向往着哪里" class="headerlink" title="我该向往着哪里"></a>我该向往着哪里</h3><p>遇到了有特殊缘分的同道中人并进行了一系列开启我个人视野的讨论，与各个朋友的出游和讨论，加之上述火车上的特殊思考，还有一系列现阶段确实面临的选择和挣扎，可以算是被迫使我不断思考前路该如何走了。行路难，行路却是生命存在的证据，也却实明白应当背负一些责任了，更情愿去做长久意义上对人类有意义的事情。</p>
+<p>当然，我还是不完全清楚自己该向往着哪里，但对渴望的事物愈发清晰的感觉，真好。</p>
+<p><img    class="lazyload" data-original="/./images/sx20230819/2.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image-20220814155201001</span></p>
 
       </section>
       <section class="extra">
@@ -250,19 +217,19 @@
           <ul class="copyright">
   
     <li><strong>本文作者：</strong>ayiyahei</li>
-    <li><strong>本文链接：</strong><a href="http://ayiyahei.github.io/2023/03/07/ky20230307/index.html" title="http:&#x2F;&#x2F;ayiyahei.github.io&#x2F;2023&#x2F;03&#x2F;07&#x2F;ky20230307&#x2F;index.html">http:&#x2F;&#x2F;ayiyahei.github.io&#x2F;2023&#x2F;03&#x2F;07&#x2F;ky20230307&#x2F;index.html</a></li>
+    <li><strong>本文链接：</strong><a href="http://ayiyahei.github.io/2023/08/19/sx230819/index.html" title="http:&#x2F;&#x2F;ayiyahei.github.io&#x2F;2023&#x2F;08&#x2F;19&#x2F;sx230819&#x2F;index.html">http:&#x2F;&#x2F;ayiyahei.github.io&#x2F;2023&#x2F;08&#x2F;19&#x2F;sx230819&#x2F;index.html</a></li>
     <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
   
 </ul>
         
         
         
-  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E2%80%9C%E7%A7%91%E7%A0%94%E2%80%9D/" rel="tag">“科研”</a></li></ul> 
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E2%80%9C%E6%9D%82%E8%AE%B0%E2%80%9D/" rel="tag">“杂记”</a></li></ul> 
 
         
   <nav class="nav">
-    <a href="/2023/08/19/sx230819/"><i class="iconfont iconleft"></i>我又该向往着哪里</a>
-    <a href="/2022/10/12/ky20221012/">gurobi数值问题<i class="iconfont iconright"></i></a>
+    <a></a>
+    <a href="/2023/03/07/ky20230307/">电力系统恢复力综述笔记<i class="iconfont iconright"></i></a>
   </nav>
 
       </section>
@@ -308,7 +275,7 @@
           
   <aside class="toc-wrap">
     <h3 class="toc-title">文章目录：</h3>
-    
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BB%E6%89%BE%E5%92%8C%E7%8F%8D%E8%97%8F%E7%9C%9F%E6%AD%A3%E6%83%B3%E8%A6%81%E7%9A%84%E4%B8%9C%E8%A5%BF"><span class="toc-text">寻找和珍藏真正想要的东西</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%9D%E6%8A%A4%E5%A5%BD%E8%BA%AB%E4%BD%93%E5%92%8C%E7%81%B5%E9%AD%82"><span class="toc-text">保护好身体和灵魂</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E6%AC%A1%E8%A7%81%E4%B8%96%E9%9D%A2"><span class="toc-text">一次见世面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%91%E8%AF%A5%E5%90%91%E5%BE%80%E7%9D%80%E5%93%AA%E9%87%8C"><span class="toc-text">我该向往着哪里</span></a></li></ol>
   </aside>
 
         
