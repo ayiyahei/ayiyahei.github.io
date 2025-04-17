@@ -33,27 +33,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>反思0813</title>
-    <url>/2022/08/13/sx220813/</url>
-    <content><![CDATA[<p>从现场回来了，忙忙碌碌许久，中途也发生了好多乱七八糟的事情，记录一下啦。</p>
-<p>啊很奇怪说起来，其实是满心欢喜去做的项目呢。我原以为的集中一批人的精力做一件事应当是很快乐且有收获的，我也一直期待这样的过程，但事实上并没有。在此反思。</p>
-<ol>
-<li><p>关于统战。统战确实是相当重要的一件事吧，一件事情，九个人朝着共同快乐的地方做了，那就是共同快乐的，五五分朝着两个目的走了那必然是数不清数不清的矛盾。但是确实又是个困难的事儿，尽可能的让每个人都有实打实的驱动进入，在筛选阶段和处理问题阶段都是极大的挑战。但至少，做什么，怎么做，谁来做，做到什么程度，这些基础事项应当是有碰头和共同认可的。</p>
-</li>
-<li><p>关于沟通。沟通是合作的基础，遇到了很多话不能讲的情况，结果要么耽误事情要么得罪人，应当采纳更有效的解决方案的。沟通的前提首先是要合理和平等，这一点我一向擅长，其次是要逐渐建立起一个坚定的核心，不能总被这样也行那样也行影响了，这一点我仍需加强。沟通不畅对人的消耗真的是，放在生活上就是没有安排的24小时随时待命以及突如其来的换酒店，放在工作上大概是各种各样的需求不匹配 and 你们是不是不沟通啊，难顶。</p>
-</li>
-<li><p>关于立场。社会真的确实是和学校很不一样的地方啊，像是纷纷过客匆匆相识又挥一挥衣袖离开，各式各样的人里，小心翼翼、热情、谨慎的外壳和底色太多了，所谓路过的都是人生。要学习的话，一个是我应当要学会找到个人在场景中的定位，一个是要训练一下自己脱离定位的能力。</p>
-</li>
-<li><p>关于接纳。还知道了一些原来不知道的事情，我大概是个很害怕被八卦甚至是谣言推着走的人，所以一直以来都不太会把自己的事情让大家知道，但是就导致了一些误解或者无奈。一些原以为相对亲近的人在我做事不够妥当的时候埋怨和责怪我，但是也有一些本以为只是普通同学的人在努力的带我快乐起来，还有一些我以为不会接纳这样的我的朋友们，装作不知情的支撑起了我当时百分之八十的快乐，感谢并且会一直记着。</p>
-<p>呜，原定要做的事没做完，原定要看的书没看完，但是学到了很多生活经验（并不主观意义上的想），想通了很多事(真好)。总之，那么，new life~</p>
-</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>“杂记”</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>从有解的模型开始</title>
     <url>/2022/08/14/ky0814/</url>
     <content><![CDATA[<p>在对能量流&#x2F;物质流等各种流耦合的初期建模和测试阶段，很容易面临无解的情况，这种情况在现实中是存在的（总不能任何事情都能靠调度解决吧），但是测试时一个存在的解又是很重要的参考。</p>
@@ -62,20 +41,6 @@
 <li>全连接图式：想这个起因是一个师兄让考虑一下的一个证明，讲的是物流行业内全连接节点配置（至少是任何两个节点之间都有路径可以流通的配置）对于负载的柔性是最大的，那么一个好的基础模型是否应当是全连接图式的呢？等有空了可以做一下。但是无论是否效果够好，我们都可以用一个基础的全连接图式模型跑代码，再一条条加节点&#x2F;边的各类约束，也许从而会获得一些信息？</li>
 <li>模型几乎不会1v1复刻真是系统的，总得定些边界，例如电热耦合的生产，弃电和弃热在现实生活中会以风冷或者直接排出等方式解决掉，但是往往不在我之前的模型中考虑。但是这种强耦合又会导致模型的不可解但实际的可解，在建模的测试阶段应当充分考虑这些因素。</li>
 </ol>
-]]></content>
-      <tags>
-        <tag>“科研”</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>图神经网络</title>
-    <url>/2022/08/14/ky0814%E2%80%94%E2%80%942/</url>
-    <content><![CDATA[<p>随着机器学习、深度学习的发展，语音、图像、自然语言处理逐渐取得了很大的突破，然而语音、图像、文本都是很简单的序列或者网格数据，是很结构化的数据，深度学习很善于处理该种类型的数据。然而现实世界中并不是所有的事物都可以表示成一个序列或者一个网格，例如社交网络、知识图谱、复杂的文件系统等，也就是说很多事物都是非结构化的。因此，对图神经网络的研究也日渐增加。可以把图神经网络分为了五类：图卷积网络、图注意力网络、图自编码机、图生成网络和图时空网络。同时，图分析任务可以大致抽象为以下四类：节点分类、链接预测、聚类以及可视化。</p>
-<h2 id="图嵌入"><a href="#图嵌入" class="headerlink" title="图嵌入"></a>图嵌入</h2><p>图嵌入指的是将图转换到保存图信息的低维空间，将图表示为或多组低维向量。图嵌入的输出是表示整个图或者部分图的低维向量。然后将输出的低维向量应用到其他机器学习方法中。 自从word2vec这个神奇的算法出世以后，导致了一波嵌入（Embedding）热，基于句子、文档表达的word2vec、doc2vec算法，基于物品序列的item2vec算法，基于图模型的图嵌入技术，无论是在引荐、广告还是反欺诈范畴，各互联网公司基于本身业务与嵌入结合的论文相继问世。由于图（Graph）表示一种“二维”的关系，而序列（Sequence）表示一种“一维”的关系。因此，要将图转换为Graph Embedding，一般需要先通过一些算法把图变为序列；然后通过一些模型或算法把这些序列转换为Embedding。当前比较知名的图嵌入方法有DeepWalk、Line和Node2vec，这些都是基于顶点对相似度的图表示学习，仅仅保留了一部分的图的特性，其效果类似于按概率的聚类。</p>
-<h2 id="图卷积网络"><a href="#图卷积网络" class="headerlink" title="图卷积网络"></a>图卷积网络</h2><p>由传统的卷积神经网络引申出的图卷积网络，图卷积方法可分为两种，基于频谱的方法和基于空间的方法。基于频谱的方法，从图信号处理的角度，引入滤波器来定义图卷积，因此基于频谱的图卷积可理解为从图信号中去除噪声。基于空间的图卷积方法，通过汇集邻居节点的信息来构建图卷积。当图卷积在节点级运作时，可以将图池化模块和图卷积进行交错叠加，从而将图粗化为高级的子图。</p>
-<p>在基于空间的图卷积网络中，与传统卷积神经网络相同的是，二者均通过聚合临近的点&#x2F;临近的节点来得到新的层&#x2F;节点表示，即抽象出的表示，以支持下一步的分类、预测等任务。其中，基于递归的空间图卷及网络主要用于不断进行节点间信息交互以更新节点，直至各节点稳定，基于组合的空间图卷及网络主要用于层层分析临域信息以获得总览的效果。而图卷积的关键就在于如何汇集节点自身的特征和临接节点的特征（神经网络学习目标）。</p>
-<h2 id="GraphSAGE"><a href="#GraphSAGE" class="headerlink" title="GraphSAGE"></a>GraphSAGE</h2><p>图卷积网络存在的一大问题在于其训练时需要整张图的结构信息，包括训练集和测试集，但是这是对于下一步的分类、预测任务是不利的，因此，我们需要一种方法，合理的把训练集和测试集区分出来，同时适应了网络结构信息不全时的预测问题。这方面的典型应用是GraphSAGE，它的训练主要分为两个步骤：采样和聚合，即首先对节点k的邻居进行采样，接着聚合邻居的信息以更新自身的表示。</p>
-<p>对于有监督学习，以预测和真实的交叉熵作为损失函数；对于无监督学习，假设相邻节点的表示尽可能相同来设计损失函数。</p>
 ]]></content>
       <tags>
         <tag>“科研”</tag>
@@ -94,6 +59,20 @@
 ]]></content>
       <tags>
         <tag>图神经网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>图神经网络</title>
+    <url>/2022/08/14/ky0814%E2%80%94%E2%80%942/</url>
+    <content><![CDATA[<p>随着机器学习、深度学习的发展，语音、图像、自然语言处理逐渐取得了很大的突破，然而语音、图像、文本都是很简单的序列或者网格数据，是很结构化的数据，深度学习很善于处理该种类型的数据。然而现实世界中并不是所有的事物都可以表示成一个序列或者一个网格，例如社交网络、知识图谱、复杂的文件系统等，也就是说很多事物都是非结构化的。因此，对图神经网络的研究也日渐增加。可以把图神经网络分为了五类：图卷积网络、图注意力网络、图自编码机、图生成网络和图时空网络。同时，图分析任务可以大致抽象为以下四类：节点分类、链接预测、聚类以及可视化。</p>
+<h2 id="图嵌入"><a href="#图嵌入" class="headerlink" title="图嵌入"></a>图嵌入</h2><p>图嵌入指的是将图转换到保存图信息的低维空间，将图表示为或多组低维向量。图嵌入的输出是表示整个图或者部分图的低维向量。然后将输出的低维向量应用到其他机器学习方法中。 自从word2vec这个神奇的算法出世以后，导致了一波嵌入（Embedding）热，基于句子、文档表达的word2vec、doc2vec算法，基于物品序列的item2vec算法，基于图模型的图嵌入技术，无论是在引荐、广告还是反欺诈范畴，各互联网公司基于本身业务与嵌入结合的论文相继问世。由于图（Graph）表示一种“二维”的关系，而序列（Sequence）表示一种“一维”的关系。因此，要将图转换为Graph Embedding，一般需要先通过一些算法把图变为序列；然后通过一些模型或算法把这些序列转换为Embedding。当前比较知名的图嵌入方法有DeepWalk、Line和Node2vec，这些都是基于顶点对相似度的图表示学习，仅仅保留了一部分的图的特性，其效果类似于按概率的聚类。</p>
+<h2 id="图卷积网络"><a href="#图卷积网络" class="headerlink" title="图卷积网络"></a>图卷积网络</h2><p>由传统的卷积神经网络引申出的图卷积网络，图卷积方法可分为两种，基于频谱的方法和基于空间的方法。基于频谱的方法，从图信号处理的角度，引入滤波器来定义图卷积，因此基于频谱的图卷积可理解为从图信号中去除噪声。基于空间的图卷积方法，通过汇集邻居节点的信息来构建图卷积。当图卷积在节点级运作时，可以将图池化模块和图卷积进行交错叠加，从而将图粗化为高级的子图。</p>
+<p>在基于空间的图卷积网络中，与传统卷积神经网络相同的是，二者均通过聚合临近的点&#x2F;临近的节点来得到新的层&#x2F;节点表示，即抽象出的表示，以支持下一步的分类、预测等任务。其中，基于递归的空间图卷及网络主要用于不断进行节点间信息交互以更新节点，直至各节点稳定，基于组合的空间图卷及网络主要用于层层分析临域信息以获得总览的效果。而图卷积的关键就在于如何汇集节点自身的特征和临接节点的特征（神经网络学习目标）。</p>
+<h2 id="GraphSAGE"><a href="#GraphSAGE" class="headerlink" title="GraphSAGE"></a>GraphSAGE</h2><p>图卷积网络存在的一大问题在于其训练时需要整张图的结构信息，包括训练集和测试集，但是这是对于下一步的分类、预测任务是不利的，因此，我们需要一种方法，合理的把训练集和测试集区分出来，同时适应了网络结构信息不全时的预测问题。这方面的典型应用是GraphSAGE，它的训练主要分为两个步骤：采样和聚合，即首先对节点k的邻居进行采样，接着聚合邻居的信息以更新自身的表示。</p>
+<p>对于有监督学习，以预测和真实的交叉熵作为损失函数；对于无监督学习，假设相邻节点的表示尽可能相同来设计损失函数。</p>
+]]></content>
+      <tags>
+        <tag>“科研”</tag>
       </tags>
   </entry>
   <entry>
@@ -189,5 +168,181 @@
       <tags>
         <tag>“杂记”</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>反思0813</title>
+    <url>/2022/08/13/sx220813/</url>
+    <content><![CDATA[<p>从现场回来了，忙忙碌碌许久，中途也发生了好多乱七八糟的事情，记录一下啦。</p>
+<p>啊很奇怪说起来，其实是满心欢喜去做的项目呢。我原以为的集中一批人的精力做一件事应当是很快乐且有收获的，我也一直期待这样的过程，但事实上并没有。在此反思。</p>
+<ol>
+<li><p>关于统战。统战确实是相当重要的一件事吧，一件事情，九个人朝着共同快乐的地方做了，那就是共同快乐的，五五分朝着两个目的走了那必然是数不清数不清的矛盾。但是确实又是个困难的事儿，尽可能的让每个人都有实打实的驱动进入，在筛选阶段和处理问题阶段都是极大的挑战。但至少，做什么，怎么做，谁来做，做到什么程度，这些基础事项应当是有碰头和共同认可的。</p>
+</li>
+<li><p>关于沟通。沟通是合作的基础，遇到了很多话不能讲的情况，结果要么耽误事情要么得罪人，应当采纳更有效的解决方案的。沟通的前提首先是要合理和平等，这一点我一向擅长，其次是要逐渐建立起一个坚定的核心，不能总被这样也行那样也行影响了，这一点我仍需加强。沟通不畅对人的消耗真的是，放在生活上就是没有安排的24小时随时待命以及突如其来的换酒店，放在工作上大概是各种各样的需求不匹配 and 你们是不是不沟通啊，难顶。</p>
+</li>
+<li><p>关于立场。社会真的确实是和学校很不一样的地方啊，像是纷纷过客匆匆相识又挥一挥衣袖离开，各式各样的人里，小心翼翼、热情、谨慎的外壳和底色太多了，所谓路过的都是人生。要学习的话，一个是我应当要学会找到个人在场景中的定位，一个是要训练一下自己脱离定位的能力。</p>
+</li>
+<li><p>关于接纳。还知道了一些原来不知道的事情，我大概是个很害怕被八卦甚至是谣言推着走的人，所以一直以来都不太会把自己的事情让大家知道，但是就导致了一些误解或者无奈。一些原以为相对亲近的人在我做事不够妥当的时候埋怨和责怪我，但是也有一些本以为只是普通同学的人在努力的带我快乐起来，还有一些我以为不会接纳这样的我的朋友们，装作不知情的支撑起了我当时百分之八十的快乐，感谢并且会一直记着。</p>
+<p>呜，原定要做的事没做完，原定要看的书没看完，但是学到了很多生活经验（并不主观意义上的想），想通了很多事(真好)。总之，那么，new life~</p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>“杂记”</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SOMETHING ABOUT ZERO-CARBON-PARK</title>
+    <url>/2025/04/17/%E9%9B%B6%E7%A2%B3%E5%9B%AD%E5%8C%BA%E6%A0%87%E5%87%86%E6%B1%87%E6%80%BB/</url>
+    <content><![CDATA[<p>At the press conference on “Achievements in China’s High-Quality Economic Development” held by the State Council Information Office on the morning of January 3, 2025, it was announced that China would coordinate planning for carbon peaking actions during the 15th Five-Year Plan period, research comprehensive evaluation and assessment methods, advance the construction of national carbon peaking pilot projects, and accelerate the establishment of a batch of zero-carbon parks. Following this announcement, the certification and construction for zero-carbon parks have garnered extensive attention from both academic circles and society at large.</p>
+<h2 id="A-Certification-and-Evaluation-Standards"><a href="#A-Certification-and-Evaluation-Standards" class="headerlink" title="A. Certification and Evaluation Standards"></a><em>A.</em> <strong>Certification and Evaluation Standards</strong></h2><p>The concept of scope in carbon accounting was first introduced by the World Resources Institute (WRI) in the context of corporate carbon emissions accounting. Its primary purpose is to categorize emission sources to avoid double-counting. Currently, this classification method has been widely adopted in carbon accounting across various fields, including zero-carbon park planning and management. In the context of zero-carbon parks, Scope typically follows the three-tiered classification established in corporate carbon accounting:  </p>
+<p>Scope 1: Direct emissions from sources owned or controlled by the park (e.g., on-site fuel combustion, company vehicles).  </p>
+<p>Scope 2: Indirect emissions from purchased energy (e.g., electricity, heat, or cooling consumed within the park).  </p>
+<p>Scope 3: Other indirect emissions across the value chain (e.g., employee commuting, material transportation, waste disposal).  </p>
+<p>Currently, there exists no clearly defined boundary for the certification scope of zero-carbon parks. Most existing policy documents adopt either Scope 1 and 2 emissions or Scopes 1-3 emissions as the accounting boundary for zero-carbon park certification. Table 1 presents the specific accounting scopes and certification criteria for zero-carbon parks as stipulated in officially released documents across China. In the table, the “Other” category under Offset Mechanisms specifically denotes independently developed emission reduction projects implemented by enterprises either within or beyond organizational boundaries. Meanwhile, the performance indicators listed in the table represent only those components related to energy production and utilization. Additionally, the numerical values presented in the Certification Criteria of the Fujian Industrial Park Low&#x2F;Zero-Carbon Evaluation Criteria serve as leading indicators rather than mandatory requirements. China’s regulatory framework recognizes multiple carbon offset mechanisms, including China Certified Emission Reductions (CCER, the national voluntary carbon credit system covering renewable energy and forestry projects), Verified Emission Reductions (VER), Verified Carbon Units (VCU), Certified Emission Reductions (CER from CDM projects), Renewable Energy certificates (representing 1MWh of clean electricity), ecological carbon sinks (certified sequestration from natural ecosystems), and Green Certificates (tradable renewable energy instruments), demonstrating a comprehensive market-based approach to emissions mitigation that accommodates both compliance and voluntary carbon reduction initiatives. In addition to carbon emission requirements, renewable energy share and green building ratio serve as key scoring metrics in China’s zero-carbon park certification system, where these indicators are typically incorporated into comprehensive evaluation frameworks to assess overall park performance while allowing flexibility for site-specific conditions. </p>
+<p>In the realm of carbon accounting and carbon offset mechanisms, the United States, the European Union, and Japan have established sophisticated systems despite the absence of a formal “zero-carbon park” concept. Their carbon accounting adheres to the GHG Protocol standard, categorizing emissions into Scope 1 (direct emissions), Scope 2 (purchased energy), and Scope 3 (supply chain emissions). Regarding carbon offset mechanisms, the EU’s Emissions Trading System (EU ETS) is the most stringent, restricting the use of offset credits to early Clean Development Mechanism (CDM) projects with limited proportions and gradually phasing out offset mechanisms. The California carbon market in the U.S. permits the use of carbon offset credits from domestic forestry and agricultural methane projects, but with an upper limit, while the federal government provides tax incentives through the Inflation Reduction Act to support carbon removal technologies. Japan, on the other hand, relies on the J-Credit system and the Joint Crediting Mechanism (JCM) projects, focusing on emerging areas such as blue carbon. The three countries primarily support high-quality carbon credit projects, including forestry carbon sinks and renewable energy, through compliance markets (such as EU ETS and the California carbon market) and voluntary markets (such as VCS and Gold Standard). They also emphasize achieving carbon targets through direct emission reduction measures rather than over-reliance on carbon offsets. Additionally, the EU strengthens corporate carbon emission disclosure through the Corporate Sustainability Reporting Directive (CSRD), the U.S. provides tax incentives for clean energy, and Japan establishes a Green Innovation Fund, all of which jointly promote regional emission reduction practices.</p>
+<table>
+<thead>
+<tr>
+<th>Standard Name</th>
+<th>Issuing Authority</th>
+<th>Year</th>
+<th>Carbon Accounting</th>
+<th>Certification Criteria</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Scope</td>
+<td>Offset Mechanisms</td>
+<td>Carbon Offset rate</td>
+<td>Emissions drop</td>
+<td>Renewable Energy Share</td>
+<td>Green Building Ratio</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Zero-Carbon Factory Evaluation Specification (T&#x2F;CECA-G 0171-2022)</td>
+<td>China Energy Conservation Association</td>
+<td>2022</td>
+<td>Scope 1-2 or Scope 1-2-3</td>
+<td>CCER, VER, VCU, CER, others</td>
+<td>&gt;50%</td>
+<td>Scores, aim to 2% drop per year</td>
+<td>Scores, aim to 100%</td>
+<td>&#x2F;</td>
+</tr>
+<tr>
+<td>Technical Specification for Zero-Carbon Park Construction (GB&#x2F;T 42405-2023)</td>
+<td>Standardization Administration of China</td>
+<td>2022</td>
+<td>Scope 1-2 + optional Scope 3</td>
+<td>CCER, RE certificates, others</td>
+<td>&gt;50%</td>
+<td>&#x2F;</td>
+<td>&#x2F;</td>
+<td>&#x2F;</td>
+</tr>
+<tr>
+<td>Inner Mongolia Zero-Carbon Park Construction Standard (DB15&#x2F;T 3124-2024)</td>
+<td>Inner Mongolia Market Regulation Bureau</td>
+<td>2024</td>
+<td>Scope 1-2</td>
+<td>CCUS, others</td>
+<td>&#x2F;</td>
+<td>&#x2F;</td>
+<td>&gt;80%</td>
+<td>new&gt;30%</td>
+</tr>
+<tr>
+<td>Fujian Industrial Park Low&#x2F;Zero-Carbon Evaluation Criteria (DB35&#x2F;T 2198-2024)</td>
+<td>Fujian Provincial Administration of Market Supervision</td>
+<td>2024</td>
+<td>Scope 1-2</td>
+<td>CCUS, Ecological carbon sink, Green Certificate</td>
+<td>Zero carbon enterprises proportion &gt;90%</td>
+<td>&#x2F;</td>
+<td>&gt;25%(clean energy&gt;75%)</td>
+<td>new &gt;60%</td>
+</tr>
+</tbody></table>
+<h2 id="B-The-Construction-of-Zero-Carbon-Parks"><a href="#B-The-Construction-of-Zero-Carbon-Parks" class="headerlink" title="B.* The Construction of Zero-Carbon Parks"></a>B.* <strong>The Construction of Zero-Carbon Parks</strong></h2><p>The construction of low-carbon and zero-carbon parks in China began several years ago. Table 2 presents examples of existing and under-construction zero-carbon park projects in China in recent years, with application scenarios encompassing industry, office, residential, and agriculture, among others. The design and construction of zero-carbon park energy systems typically take into account the local resource conditions and the energy demands of the park, opting for the most suitable power supply methods in a location-specific manner. For instance, leveraging the superior wind and solar resources of Ordos City, the Ordos Zero-Carbon Industrial Park has planned and laid out wind farms within a 150-kilometer radius and constructed a microgrid to supply green electricity. This setup enables 80% of the green electricity to be generated and directly supplied on-site, with the remaining 20% fed into the grid for trading. By adopting a “green energy + back-pressure unit + grid” approach, a stable and reliable power supply is ensured for green production in factories. Currently, 30,000 kilowatts of green electricity have been connected to the Envision Power factory. The ongoing construction of the Talent Innovation City is designed to use a combination of “wind power + photovoltaics + fuel cells + energy storage” to achieve a 100% green electricity supply. The Beijing Goldwind Science &amp; Technology Yizhuang Smart Park has constructed a photovoltaic intelligent greenhouse covering over 3,000 square meters, integrating a new energy photovoltaic power generation system, a smart Internet of Things system, and an integrated water and fertilizer system for high-yield cultivation. Additionally, the park is equipped with various energy storage devices, including all-vanadium redox flow storage and lithium batteries, to shave peaks and fill valleys as well as to smooth power fluctuations. After purchasing and offsetting with CCERs, the park achieves carbon neutrality and has been certified as a “carbon-neutral” smart park by the Beijing Green Exchange. The Min-Tai (Fuzhou) Blue Economy Industrial Park efficiently recovers waste heat and energy from local nuclear power facilities to supply a variety of clean energy sources to the industrial parks in Fuqing City.</p>
+<p>Internationally, zero-carbon developments predominantly adopt community-scale or city-wide carbon neutrality frameworks, incorporating diverse functional typologies spanning commercial, educational, agricultural, and residential sectors. The energy infrastructure configuration demonstrates strong geographical specificity, optimized according to regional resource endowments. A paradigmatic case is Masdar City, the inaugural zero-carbon urban development, which implements a polygeneration energy matrix integrating photovoltaic, wind, and biomass systems. Notably, its 17.5 MW solar PV installation represents both the United Arab Emirates’ maiden grid-connected renewable facility and ranks among the Middle East’s most substantial photovoltaic installations. The built environment employs advanced material solutions, utilizing low-carbon cementitious composites and structural components containing 90% post-consumer aluminum, achieving 40% reductions in both energy and water intensity relative to conventional benchmarks. The Beddington Zero Energy Development (BedZED) exemplifies the UK’s pioneering zero-carbon residential community, employing an integrated sustainable design paradigm. Its energy architecture combines a 130 kW biomass-fed combined heat and power plant with extensive photovoltaic arrays (777 m²) and renewable energy procurement mechanisms. The development’s passive design strategy incorporates vacuum-insulated building envelopes, multi-glazed fenestration systems, and thermal mass optimization, reducing space heating demand by 58%. An enthalpy recovery ventilation system achieves 70% thermal efficiency in waste air heat reclamation. In Almere, several sustainable communities are under development, with ReGen Village being the most notable. Beyond renewable energy utilization, these communities emphasize integrated water management and waste recycling systems.  </p>
+<table>
+<thead>
+<tr>
+<th>Park Name</th>
+<th>Location</th>
+<th>Scenario</th>
+<th>Power Supply Method</th>
+<th>Benefits</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ordos Zero-Carbon Industrial Park</td>
+<td>Mongoljin Autonomous Region, Ordos City, Ijinholo Banner, Mengsu Economic Development Zone</td>
+<td>Industry, Office, and Living</td>
+<td>Wind power, back-pressure unit, power grid, photovoltaics, fuel cells, energy storage</td>
+<td>80% of green electricity used on-site, and remaining 20% fed into the grid for trading. Except reduce approximately 10 million tons carbon dioxide emission an annually in 2025.</td>
+</tr>
+<tr>
+<td>Xiong’an New Area Zero-Carbon Park</td>
+<td>The starting area of Xiong’an New Area</td>
+<td>building</td>
+<td>photovoltaics, ground-source heat pump system, multi-terminal low-voltage flexible direct current ring network</td>
+<td>The park reduces its system costs by 8.5759 million yuan annually and cuts its total carbon emissions by 8,938 tons per year through a variety of energy-saving measures and the use of clean energy.</td>
+</tr>
+<tr>
+<td>Beijing Goldwind Science &amp; Technology Yizhuang Smart Park</td>
+<td>Beijing Economic-Technological Development Area</td>
+<td>Manufacturing, Office, Residential, and Agriculture</td>
+<td>Wind Power, Photovoltaic Power Generation, Natural Gas CCHP, Energy Storage System</td>
+<td>The park’s renewable energy usage exceeds 50%, with an annual carbon reduction of 4,950 tons. Carbon neutrality is achieved after purchasing and offsetting with CCERs.</td>
+</tr>
+<tr>
+<td>Min-Tai (Fuzhou) Blue Economy Industrial Park</td>
+<td>Fujian Province, Fuzhou City, Fuqing Jiangjing Town</td>
+<td>Industry and Residence</td>
+<td>six operational million-kilowatt-class nuclear power units of Fuqing Nuclear Power Plant and the planned expansion units</td>
+<td>expected to achieve “zero-carbon steam supply, zero-carbon cooling supply, zero-carbon heat supply, zero-carbon water supply, and zero-carbon power supply” in the region</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>Park Name</th>
+<th>Location</th>
+<th>Scenario</th>
+<th>Power Supply Method</th>
+<th>Benefits</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Masdar City</td>
+<td>Abu Dhabi, United Arab Emirates</td>
+<td>An integrated area combining residential, commercial, scientific research, and educational functions.</td>
+<td>Photovoltaic power generation, wind turbine power generation, and waste-to-energy</td>
+<td>Targeting 100% renewable energy supply, the park currently meets most demand through on-site generation. Masdar City’s solar power costs have plummeted from $0.40&#x2F;kWh to just 1.35¢&#x2F;kWh, ranking among the world’s most economical solar energy sources.</td>
+</tr>
+<tr>
+<td>BedZED（Beddington Zero Energy Development）</td>
+<td>The town of Sutton in southwest London</td>
+<td>A residential community that includes housing, office spaces, and other living amenities.</td>
+<td>Biomass combined heat and power (CHP), photovoltaic power generation, green electricity, and waste heat recovery.</td>
+<td>The average energy consumption per household is only one-tenth that of a conventional residence, with electricity bills being cut by approximately two-thirds.</td>
+</tr>
+<tr>
+<td>ReGen Village</td>
+<td>Flevoland, the Netherlands</td>
+<td>A community that encompasses residential, office, and agricultural areas.</td>
+<td>Photovoltaic power generation, wind power generation, biomass power generation, ground-source heat pumps, and equipped with a smart grid and energy storage system.</td>
+<td>&#x2F;</td>
+</tr>
+</tbody></table>
+]]></content>
   </entry>
 </search>
